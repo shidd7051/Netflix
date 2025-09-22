@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <title>Netflix</title>
+    <link rel="icon" href="img/netflix-mobile-application-logo-free-png.webp">
+</head>
+
+
+<style>
+    body {
+        background-color: rgb(36, 34, 34);
+    }
+
+    footer {
+        background: linear-gradient(10deg, rgb(0, 0, 0), rgb(45, 37, 37));
+        height: 40vh;
+        padding-top: 2px;
+    }
+
+    h1 {
+        font-size: 60px;
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    li a:hover {
+        color: red;
+    }
+
+    p {
+        font-size: 20px;
+        color: white;
+    }
+
+    h4 {
+        color: white;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 90%;
+        margin: 50px auto;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        gap: 15px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slider img {
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s;
+    }
+
+    .slider img:hover {
+        transform: scale(1.1);
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .arrow.left {
+        left: -10px;
+    }
+
+    .arrow.right {
+        right: -10px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html"><img class="img-fluid" src="/img/logo.png" alt=""
+                    width="100px"></a>
+            <button type="button" class="btn btn-danger">Sign In</button>
+        </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1>Netflix Originals</h1>
+        <p>Netflix is the home of amazing original programming that you can’t find anywhere else. <br> Movies, TV shows,
+            specials and more, it’s all tailored specifically to you.</p>
+
+    </div>
+
+    <div class="slider-container">
+        <h4>Crowd Pleasers</h4>
+        <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="slider" id="slider">
+            <img src="img/1.webp" alt="">
+            <img src="img/10.jpg" alt="">
+            <img src="img/12.webp" alt="">
+            <img src="img/13.webp" alt="">
+            <img src="img/2.webp" alt="">
+            <img src="img/3.webp" alt="">
+            <img src="img/4.webp" alt="">
+            <img src="img/5.webp" alt="">
+            <img src="img/6.webp" alt="">
+            <img src="img/7.jpg" alt="">
+            <img src="img/9.jpg" alt="">
+            <img src="img/13.webp" alt="">
+            <img src="img/2.webp" alt="">
+            <img src="img/3.webp" alt="">
+            <img src="img/4.webp" alt="">
+            <img src="img/5.webp" alt="">
+            <img src="img/6.webp" alt="">
+            <img src="img/7.jpg" alt="">
+            <img src="img/9.jpg" alt="">
+            <img src="img/1.webp" alt="">
+            <img src="img/10.jpg" alt="">
+            <img src="img/12.webp" alt="">
+            <img src="img/13.webp" alt="">
+            <img src="img/2.webp" alt="">
+            <img src="img/3.webp" alt="">
+            <img src="img/4.webp" alt="">
+            <img src="img/5.webp" alt="">
+            <img src="img/6.webp" alt="">
+            <img src="img/7.jpg" alt="">
+            <img src="img/9.jpg" alt="">
+            <img src="img/13.webp" alt="">
+            <img src="img/2.webp" alt="">
+            <img src="img/3.webp" alt="">
+            <img src="img/4.webp" alt="">
+            <img src="img/5.webp" alt="">
+            <img src="img/6.webp" alt="">
+            <img src="img/7.jpg" alt="">
+            <img src="img/9.jpg" alt="">
+
+        </div>
+        <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+ <br>
+    <footer>
+        <div class="container mt-5">
+            <div class="row">
+                <h2>Need More Help?</h2>
+                <hr>
+                <br><br>
+                <div class="col-sm-4">
+                    <ul>
+                        <li><a href="">Terms of Use</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Cookie Preferences</a></li>
+                        <li><a href="">Corporate Information</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let currentSlide = 0;
+        const slider = document.getElementById("slider");
+        const images = slider.children.length;
+        const visibleImages = 5; // ek row me kitni dikhani hai
+        const imageWidth = 215; // 200px image + 15px gap
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide > images - visibleImages) currentSlide = images - visibleImages;
+            slider.style.transform = `translateX(${-currentSlide * imageWidth}px)`;
+        }
+
+
+
+
+
+
+
+        const btn1 = document.querySelector(".qst1");
+        const btn2 = document.querySelector(".qst2");
+        const btn3 = document.querySelector(".qst3");
+        const btn4 = document.querySelector(".qst4");
+        const btn5 = document.querySelector(".qst5");
+        const btn6 = document.querySelector(".qst6");
+
+        let list = document.querySelectorAll(".question");
+
+        btn1.addEventListener("click", destroy);
+        btn2.addEventListener("click", destroy);
+        btn3.addEventListener("click", destroy);
+        btn4.addEventListener("click", destroy);
+        btn5.addEventListener("click", destroy);
+        btn6.addEventListener("click", destroy);
+
+        function destroy() {
+            list.forEach(answer => {
+                if (answer.lastElementChild.style.display === "block" && answer.firstElementChild !== this) {
+                    answer.firstElementChild.lastElementChild.style.transform = "rotate(0deg)";
+                    answer.lastElementChild.style.display = "none";
+                }
+            });
+
+            let element = this.nextElementSibling;
+            if (element.style.display === "none" || element.style.display === "") {
+                this.lastElementChild.style.transform = "rotate(45deg)";
+                element.style.display = "block";
+            } else {
+                this.lastElementChild.style.transform = "rotate(0deg)";
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
